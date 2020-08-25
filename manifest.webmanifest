@@ -2,9 +2,12 @@
     "background_color": "black",
     "description": "IT Solution Website",
     "display": "fullscreen",
-   
+    "icons": [{
+        "src": "icon/icon.png",
+        "sizes": "192x192",
+        "type": "image/png"
+    }],
     "name": "Depe-Tech",
     "short_name": "dopetech",
     "start_url": "/Dope-Tech/index.html"
 }
-
