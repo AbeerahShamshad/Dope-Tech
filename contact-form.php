@@ -1,16 +1,18 @@
 <?php
 
-if(isset($_POST['submit'])){
-    $to = "muhammad.49331@iqra.edu.pk";
-    $subject = $_POST['subject'];
-    $email = $_POST['email'];
-    $txt = $_POST['message'];
-    $headers = "From: " .$email . "\r\r" . 
-    "CC: somebodyelse@example.com";
+if (isset($_POST['submit'])) {
+  $name = $_POST['name'];
+  $subject = $_POST['subject'];
+  $email = $_POST['email'];
+  $message = $_POST['message'];
 
-    mail($to,$subject,$txt, $headers);
+  $mailTo = "muhammad.49331@iqra.edu.pk";
+  $headers = "from: ".$email;
+  $txt = "you received an email from ".$name.". \n\n".$message;
 
-    header("Location: contact.html");
+  mail($mailTo, $subject, $txt, $headers);
+  header("Location: contact.html?mailsend");
 }
 
 ?>
+
